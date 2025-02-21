@@ -3,9 +3,12 @@
 import mongoose from 'mongoose'
 import configs from '../config'
 
-const { db: { port, host, name} } = configs
+const { db: { port, host, name, user, password} } = configs
+// when you want to use on local
+// const CONNECT_STRING: string = `mongodb://${host}:${port}/${name}`;
 
-const CONNECT_STRING: string = `mongodb://${host}:${port}/${name}`;
+// cloud db 
+const CONNECT_STRING: string = `mongodb+srv://${user}:${password}@cluster0.8wd2d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 class Database {
     private static instance: Database | null;

@@ -8,6 +8,8 @@ interface AppConfig {
         port: string | undefined;
         host: string | undefined;
         name: string | undefined;
+        user: string | undefined;
+        password: string | undefined
     };
 }
 
@@ -19,6 +21,8 @@ const develop: AppConfig = {
         port: process.env.DEV_DB_PORT,
         host: process.env.DEV_DB_HOST,
         name: process.env.DEV_DB_NAME,
+        user: process.env.DEV_DB_USER,
+        password: process.env.DEV_DB_PASS,
     },
 };
 
@@ -30,6 +34,8 @@ const production: AppConfig = {
         port: process.env.PRO_DB_PORT,
         host: process.env.PRO_DB_HOST,
         name: process.env.PRO_DB_NAME,
+        user: process.env.PRO_DB_USER,
+        password: process.env.PRO_DB_PASS,
     },
 };
 
